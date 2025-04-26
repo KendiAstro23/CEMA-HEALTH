@@ -1,5 +1,5 @@
 from rest_framework import serializers
-from .models import Client, HealthProgram
+from .models import Client, HealthProgram, Appointment
 
 class HealthProgramSerializer(serializers.ModelSerializer):
     class Meta:
@@ -10,3 +10,10 @@ class ClientSerializer(serializers.ModelSerializer):
     class Meta:
         model = Client
         fields = '__all__'
+
+class AppointmentSerializer(serializers.ModelSerializer):
+    client_name = serializers.CharField(source='client.name', read_only=True)
+
+    class Meta:
+        model = Appointment
+        fields = ['id', 'client', 'client_name', 'doctor', 'date', 'notes']
