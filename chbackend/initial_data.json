@@ -3,34 +3,367 @@
     "model": "api.healthprogram",
     "pk": 1,
     "fields": {
-      "title": "HIV Care"
+      "name": "Nutrition"
     }
   },
   {
     "model": "api.healthprogram",
     "pk": 2,
     "fields": {
-      "title": "TB Program"
+      "name": "Mental Health"
+    }
+  },
+  {
+    "model": "api.healthprogram",
+    "pk": 3,
+    "fields": {
+      "name": "Physical Health"
+    }
+  },
+  {
+    "model": "api.healthprogram",
+    "pk": 4,
+    "fields": {
+      "name": "Health Coaching"
+    }
+  },
+  {
+    "model": "api.healthprogram",
+    "pk": 5,
+    "fields": {
+      "name": "Wellness Programs"
+    }
+  },
+  {
+    "model": "api.healthprogram",
+    "pk": 6,
+    "fields": {
+      "name": "Regular Health Assessments"
     }
   },
   {
     "model": "api.client",
     "pk": 1,
     "fields": {
-      "name": "Jane Doe",
-      "email": "jane@example.com",
-      "age": 29,
-      "enrolled_programs": [1]
+      "name": "Olivia Carter",
+      "email": "olivia.carter@example.com",
+      "age": 22,
+      "phone": "0712345678",
+      "interests": "Yoga, Painting, Gardening",
+      "image_url": "/media/1.jpg",
+      "enrolled_programs": [1, 2]
     }
   },
   {
     "model": "api.client",
     "pk": 2,
     "fields": {
-      "name": "John Smith",
-      "email": "john@example.com",
+      "name": "Ethan Mitchell",
+      "email": "ethan.mitchell@example.com",
+      "age": 30,
+      "phone": "0723456789",
+      "interests": "Running, Hiking, Traveling",
+      "image_url": "/media/1(2).jpg",
+      "enrolled_programs": [3]
+    }
+  },
+  {
+    "model": "api.client",
+    "pk": 3,
+    "fields": {
+      "name": "Sophia Roberts",
+      "email": "sophia.roberts@example.com",
+      "age": 20,
+      "phone": "0734567890",
+      "interests": "Cooking, Swimming, Dancing",
+      "image_url": "/media/3.jpg",
+      "enrolled_programs": [2, 4]
+    }
+  },
+  {
+    "model": "api.client",
+    "pk": 4,
+    "fields": {
+      "name": "Liam Turner",
+      "email": "liam.turner@example.com",
+      "age": 13,
+      "phone": "0745678901",
+      "interests": "Cycling, Gaming, Reading",
+      "image_url": "/media/4.jpg",
+      "enrolled_programs": [5, 6]
+    }
+  },
+  {
+    "model": "api.client",
+    "pk": 5,
+    "fields": {
+      "name": "Isabella Hughes",
+      "email": "isabella.hughes@example.com",
+      "age": 30,
+      "phone": "0756789012",
+      "interests": "Photography, Traveling, Volunteering",
+      "image_url": "/media/5.jpg",
+      "enrolled_programs": [1, 3, 5]
+    }
+  },
+  {
+    "model": "api.client",
+    "pk": 6,
+    "fields": {
+      "name": "Noah Edwards",
+      "email": "noah.edwards@example.com",
+      "age": 54,
+      "phone": "0767890123",
+      "interests": "Music, Movies, Fitness",
+      "image_url": "/media/6.jpg",
+      "enrolled_programs": [2, 6]
+    }
+  },
+  {
+    "model": "api.client",
+    "pk": 7,
+    "fields": {
+      "name": "Mia Murphy",
+      "email": "mia.murphy@example.com",
+      "age": 30,
+      "phone": "0778901234",
+      "interests": "Drawing, Journaling, Singing",
+      "image_url": "/media/7.jpg",
+      "enrolled_programs": [3]
+    }
+  },
+  {
+    "model": "api.client",
+    "pk": 8,
+    "fields": {
+      "name": "William Barnes",
+      "email": "william.barnes@example.com",
+      "age": 30,
+      "phone": "0789012345",
+      "interests": "Martial Arts, Traveling, Blogging",
+      "image_url": "/media/8.jpg",
+      "enrolled_programs": [1, 4, 6]
+    }
+  },
+  {
+    "model": "api.client",
+    "pk": 9,
+    "fields": {
+      "name": "Charlotte Reynolds",
+      "email": "charlotte.reynolds@example.com",
+      "age": 25,
+      "phone": "0790123456",
+      "interests": "Painting, Hiking, Horse Riding",
+      "image_url": "/media/9.jpg",
+      "enrolled_programs": [2, 5]
+    }
+  },
+  {
+    "model": "api.client",
+    "pk": 10,
+    "fields": {
+      "name": "James Ellis",
+      "email": "james.ellis@example.com",
+      "age": 36,
+      "phone": "0701234567",
+      "interests": "Basketball, Traveling, Reading",
+      "image_url": "/media/11.jpg",
+      "enrolled_programs": [3, 5, 6]
+    }
+  },
+  {
+    "model": "api.client",
+    "pk": 11,
+    "fields": {
+      "name": "Amelia Chapman",
+      "email": "amelia.chapman@example.com",
+      "age": 23,
+      "phone": "0712345679",
+      "interests": "Cooking, Yoga, Cycling",
+      "image_url": "/media/10.jpg",
+      "enrolled_programs": [4]
+    }
+  },
+  {
+    "model": "api.client",
+    "pk": 12,
+    "fields": {
+      "name": "Lucas Graham",
+      "email": "lucas.graham@example.com",
       "age": 40,
+      "phone": "0723456780",
+      "interests": "Running, Gaming, Coding",
+      "image_url": "/media/12.jpg",
       "enrolled_programs": [1, 2]
+    }
+  },
+  {
+    "model": "api.client",
+    "pk": 13,
+    "fields": {
+      "name": "Harper Stevenson",
+      "email": "harper.stevenson@example.com",
+      "age": 30,
+      "phone": "0734567891",
+      "interests": "Photography, Swimming, Movies",
+      "image_url": "/media/13.jpg",
+      "enrolled_programs": [2, 3]
+    }
+  },
+  {
+    "model": "api.client",
+    "pk": 14,
+    "fields": {
+      "name": "Benjamin Doyle",
+      "email": "benjamin.doyle@example.com",
+      "age": 27,
+      "phone": "0745678902",
+      "interests": "Singing, Traveling, Biking",
+      "image_url": "/media/14.jpg",
+      "enrolled_programs": [1, 4, 5]
+    }
+  },
+  {
+    "model": "api.client",
+    "pk": 15,
+    "fields": {
+      "name": "Ella Fleming",
+      "email": "ella.fleming@example.com",
+      "age": 33,
+      "phone": "0756789013",
+      "interests": "Cooking, Gardening, Painting",
+      "image_url": "/media/15.jpg",
+      "enrolled_programs": [5, 6]
+    }
+  },
+  {
+    "model": "api.client",
+    "pk": 16,
+    "fields": {
+      "name": "Henry Bowen",
+      "email": "henry.bowen@example.com",
+      "age": 30,
+      "phone": "0767890124",
+      "interests": "Gaming, Hiking, Blogging",
+      "image_url": "/media/16.jpg",
+      "enrolled_programs": [3, 4]
+    }
+  },
+  {
+    "model": "api.client",
+    "pk": 17,
+    "fields": {
+      "name": "Avery Parsons",
+      "email": "avery.parsons@example.com",
+      "age": 21,
+      "phone": "0778901235",
+      "interests": "Cycling, Martial Arts, Reading",
+      "image_url": "/media/17.jpg",
+      "enrolled_programs": [2, 6]
+    }
+  },
+  {
+    "model": "api.client",
+    "pk": 18,
+    "fields": {
+      "name": "Alexander Fuller",
+      "email": "alexander.fuller@example.com",
+      "age": 30,
+      "phone": "0789012346",
+      "interests": "Swimming, Fitness, Music",
+      "image_url": "/media/18.jpg",
+      "enrolled_programs": [1]
+    }
+  },
+  {
+    "model": "api.client",
+    "pk": 19,
+    "fields": {
+      "name": "Abigail Slater",
+      "email": "abigail.slater@example.com",
+      "age": 16,
+      "phone": "0790123457",
+      "interests": "Photography, Yoga, Traveling",
+      "image_url": "/media/19.jpg",
+      "enrolled_programs": [4, 5]
+    }
+  },
+  {
+    "model": "api.client",
+    "pk": 20,
+    "fields": {
+      "name": "Daniel Kent",
+      "email": "daniel.kent@example.com",
+      "age": 44,
+      "phone": "0701234568",
+      "interests": "Basketball, Blogging, Fitness",
+      "image_url": "/media/20.jpg",
+      "enrolled_programs": [2, 3, 6]
+    }
+  },
+  {
+    "model": "api.client",
+    "pk": 21,
+    "fields": {
+      "name": "Sofia Sharpe",
+      "email": "sofia.sharpe@example.com",
+      "age": 30,
+      "phone": "0712345680",
+      "interests": "Running, Singing, Photography",
+      "image_url": "/media/21.jpg",
+      "enrolled_programs": [3, 5]
+    }
+  },
+  {
+    "model": "api.client",
+    "pk": 22,
+    "fields": {
+      "name": "Jackson Lyons",
+      "email": "jackson.lyons@example.com",
+      "age": 33,
+      "phone": "0723456790",
+      "interests": "Fitness, Yoga, Movies",
+      "image_url":"/media/22.jpg",
+      "enrolled_programs": [1, 2, 6]
+    }
+  },
+  {
+    "model": "api.client",
+    "pk": 23,
+    "fields": {
+      "name": "Scarlett Noble",
+      "email": "scarlett.noble@example.com",
+      "age": 36,
+      "phone": "0734567901",
+      "interests": "Dancing, Traveling, Cooking",
+      "image_url": "/media/23.jpg",
+      "enrolled_programs": [2]
+    }
+  },
+  {
+    "model": "api.client",
+    "pk": 24,
+    "fields": {
+      "name": "Sebastian Barrett",
+      "email": "sebastian.barrett@example.com",
+      "age": 30,
+      "phone": "0745678912",
+      "interests": "Swimming, Fitness, Painting",
+      "image_url": "/media/24.jpg",
+      "enrolled_programs": [3, 4]
+    }
+  },
+  {
+    "model": "api.client",
+    "pk": 25,
+    "fields": {
+      "name": "Chloe Mason",
+      "email": "chloe.mason@example.com",
+      "age": 28,
+      "phone": "0756789023",
+      "interests": "Photography, Hiking, Blogging",
+      "image_url": "/media/25.jpg",
+      "enrolled_programs": [5, 6]
     }
   }
 ]
