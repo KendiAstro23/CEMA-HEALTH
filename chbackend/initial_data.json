@@ -50,7 +50,7 @@
       "age": 22,
       "phone": "0712345678",
       "interests": "Yoga, Painting, Gardening",
-      "image_url": "/media/1.jpg",
+      "image_url": "/media/1(2).jpg",
       "enrolled_programs": [1, 2]
     }
   },
@@ -63,7 +63,7 @@
       "age": 30,
       "phone": "0723456789",
       "interests": "Running, Hiking, Traveling",
-      "image_url": "/media/1(2).jpg",
+      "image_url": "/media/2.jpg",
       "enrolled_programs": [3]
     }
   },
@@ -360,7 +360,7 @@
       "name": "Chloe Mason",
       "email": "chloe.mason@example.com",
       "age": 28,
-      "phone": "0756789023",
+      "phone": "0756789073",
       "interests": "Photography, Hiking, Blogging",
       "image_url": "/media/25.jpg",
       "enrolled_programs": [5, 6]

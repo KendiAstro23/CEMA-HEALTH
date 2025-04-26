@@ -1,6 +1,7 @@
 import os
+from pathlib import Path
 
-BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+BASE_DIR = Path(__file__).resolve().parent.parent
 ROOT_URLCONF = 'chbackend.urls'
 
 
@@ -52,6 +53,9 @@ DATABASES = {
 
 DEBUG = True
 STATIC_URL = '/static/'
+MEDIA_URL = '/media/'
+MEDIA_ROOT = BASE_DIR / 'media'
+
 
 
 # TEMPLATES configuration for Django Admin and other templates
