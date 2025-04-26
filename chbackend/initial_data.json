@@ -1,0 +1,36 @@
+[
+  {
+    "model": "api.healthprogram",
+    "pk": 1,
+    "fields": {
+      "title": "HIV Care"
+    }
+  },
+  {
+    "model": "api.healthprogram",
+    "pk": 2,
+    "fields": {
+      "title": "TB Program"
+    }
+  },
+  {
+    "model": "api.client",
+    "pk": 1,
+    "fields": {
+      "name": "Jane Doe",
+      "email": "jane@example.com",
+      "age": 29,
+      "enrolled_programs": [1]
+    }
+  },
+  {
+    "model": "api.client",
+    "pk": 2,
+    "fields": {
+      "name": "John Smith",
+      "email": "john@example.com",
+      "age": 40,
+      "enrolled_programs": [1, 2]
+    }
+  }
+]

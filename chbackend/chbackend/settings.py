@@ -17,6 +17,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'corsheaders',  # for React communication
     'api',          # your custom app
+
 ]
 
 MIDDLEWARE = [
@@ -31,8 +32,12 @@ MIDDLEWARE = [
 ]
 
 CORS_ALLOW_ALL_ORIGINS = True  
-ALLOWED_HOSTS = ['127.0.0.1', 'localhost']
-
+CORS_ALLOWED_ORIGINS = [
+    "http://localhost:3000",  
+]
+CSRF_TRUSTED_ORIGINS = [
+    "http://localhost:3000",  
+]
 
 DATABASES = {
     'default': {
