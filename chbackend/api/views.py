@@ -4,6 +4,8 @@ from rest_framework.permissions import  AllowAny
 from rest_framework.decorators import api_view
 from rest_framework.response import Response
 from rest_framework import status
+from rest_framework_api_key.permissions import HasAPIKey
+from rest_framework.generics import RetrieveAPIView
 from .models import Client, HealthProgram, Appointment
 from .serializers import ClientSerializer, HealthProgramSerializer, AppointmentSerializer
 from rest_framework import generics
@@ -33,6 +35,15 @@ class ClientRetrieveUpdateDestroy(generics.RetrieveUpdateDestroyAPIView):
 class AppointmentListCreate(generics.ListCreateAPIView):
     queryset = Appointment.objects.all()
     serializer_class = AppointmentSerializer
+
+class AppointmentViewSet(viewsets.ModelViewSet):
+    queryset = Appointment.objects.all()
+    serializer_class = AppointmentSerializer
+
+class PublicClientProfileView(RetrieveAPIView):
+    queryset = Client.objects.all()
+    serializer_class = ClientSerializer
+    permission_classes = [HasAPIKey]
 
 @api_view(['GET'])
 def client_detail(request, pk):

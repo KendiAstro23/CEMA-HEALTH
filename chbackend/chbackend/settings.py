@@ -18,6 +18,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'corsheaders',  # for React communication
     'api',          # your custom app
+    "rest_framework_api_key",
 
 ]
 
