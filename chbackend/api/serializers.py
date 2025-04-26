@@ -7,6 +7,12 @@ class HealthProgramSerializer(serializers.ModelSerializer):
         fields = '__all__'
 
 class ClientSerializer(serializers.ModelSerializer):
+    enrolled_programs = serializers.SlugRelatedField(
+        many=True,
+        read_only=True,
+        slug_field='name'
+    )
+
     class Meta:
         model = Client
         fields = '__all__'
