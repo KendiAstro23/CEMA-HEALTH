@@ -1,5 +1,6 @@
 import os
 from pathlib import Path
+import dj_database_url
 
 BASE_DIR = Path(__file__).resolve().parent.parent
 ROOT_URLCONF = 'chbackend.urls'
@@ -44,14 +45,7 @@ CSRF_TRUSTED_ORIGINS = [
 ]
 
 DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'cema_health_db',  
-        'USER': 'cema_user',  
-        'PASSWORD': 'personalpassword',  
-        'HOST': 'localhost',  # Local MySQL server address
-        'PORT': '3306',  # Default MySQL port
-    }
+    'default': dj_database_url.config(default='postgresql://cema_health_pgdb_user:0eV4wWJpi4ABlPegF5DsYlYiKpDZX7Hx@dpg-d073nchr0fns738668ug-a.oregon-postgres.render.com/cema_health_pgdb')
 }
 
 DEBUG = True
