@@ -22,7 +22,7 @@ INSTALLED_APPS = [
 
 ]
 
-ALLOWED_HOSTS = ['https://cema-health-1g0x.onrender.com']
+ALLOWED_HOSTS = ['cema-health-1g0x.onrender.com']
 
 MIDDLEWARE = [
     'corsheaders.middleware.CorsMiddleware',
