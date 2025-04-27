@@ -17,10 +17,12 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'corsheaders',  # for React communication
-    'api',          # your custom app
+    'api',          # my custom app
     "rest_framework_api_key",
 
 ]
+
+ALLOWED_HOSTS = ['https://cema-health-1g0x.onrender.com']
 
 MIDDLEWARE = [
     'corsheaders.middleware.CorsMiddleware',
