@@ -2,6 +2,8 @@ from django.db import models
 
 class HealthProgram(models.Model):
     name = models.CharField(max_length=100)
+    description = models.TextField(blank=True)
+    imageUrl = models.URLField(blank=True)
 
 class Client(models.Model):
     name = models.CharField(max_length=100)
@@ -14,7 +16,8 @@ class Client(models.Model):
 
 class Appointment(models.Model):
     client = models.ForeignKey('Client', on_delete=models.CASCADE, related_name='appointments')
-    doctor = models.CharField(max_length=100)  # You can later link to a real Doctor model
+    doctor = models.CharField(max_length=100)  # PUT A placeholder for the time
+    program = models.ForeignKey(HealthProgram, on_delete=models.CASCADE) 
     date = models.DateTimeField()
     notes = models.TextField(blank=True)
 

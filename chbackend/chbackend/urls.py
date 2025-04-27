@@ -9,7 +9,7 @@ from django.conf.urls.static import static
 
 router = DefaultRouter()
 router.register(r'clients', ClientViewSet)
-router.register(r'programs', HealthProgramViewSet)
+router.register(r'programs', HealthProgramViewSet, basename='program')
 router.register(r'appointments', AppointmentViewSet)
 
 urlpatterns = [

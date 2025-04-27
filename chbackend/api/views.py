@@ -39,6 +39,37 @@ class AppointmentListCreate(generics.ListCreateAPIView):
 class AppointmentViewSet(viewsets.ModelViewSet):
     queryset = Appointment.objects.all()
     serializer_class = AppointmentSerializer
+    
+    def create(self, request):
+        try:
+            client_id = request.data['client']
+            program_id = request.data['program']
+            doctor = request.data.get('doctor', '')
+            date = request.data.get('date', None)
+            notes = request.data.get('notes', '')
+
+            client = Client.objects.get(id=client_id)
+            program = HealthProgram.objects.get(id=program_id)  # 🔥 Use HealthProgram because that's your model name
+
+            appointment = Appointment.objects.create(
+                client=client,
+                program=program,
+                doctor=doctor,
+                date=date,
+                notes=notes
+            )
+
+            # Serialize the newly created appointment
+            serializer = AppointmentSerializer(appointment)
+            return Response(serializer.data, status=status.HTTP_201_CREATED)
+        
+        except Client.DoesNotExist:
+            return Response({"error": "Client not found."}, status=status.HTTP_404_NOT_FOUND)
+        except HealthProgram.DoesNotExist:
+            return Response({"error": "Program not found."}, status=status.HTTP_404_NOT_FOUND)
+        except Exception as e:
+            return Response({"error": str(e)}, status=status.HTTP_400_BAD_REQUEST)
+
 
 class PublicClientProfileView(RetrieveAPIView):
     queryset = Client.objects.all()

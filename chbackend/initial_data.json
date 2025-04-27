@@ -50,7 +50,7 @@
       "age": 22,
       "phone": "0712345678",
       "interests": "Yoga, Painting, Gardening",
-      "image_url": "/media/1(2).jpg",
+      "image_url": "/media/one.jpg",
       "enrolled_programs": [1, 2]
     }
   },
