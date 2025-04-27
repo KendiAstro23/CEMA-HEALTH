@@ -4,13 +4,23 @@
     {
       "src": "chfrontend/package.json",
       "use": "@vercel/static-build",
-      "config": { "distDir": "build" }
+      "config": {
+        "distDir": "chfrontend/build"
+      }
+    },
+    {
+      "src": "chbackend/wsgi.py",
+      "use": "@vercel/python"
     }
   ],
   "routes": [
     {
       "src": "/(.*)",
       "dest": "/chfrontend/build/$1"
+    },
+    {
+      "src": "/api/(.*)",
+      "dest": "/chbackend/$1"
     }
   ]
 }
