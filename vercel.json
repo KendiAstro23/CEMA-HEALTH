@@ -1,15 +1,16 @@
 {
-    "builds": [
-      {
-        "src": "chfrontend/package.json",
-        "use": "@vercel/react"
-      }
-    ],
-    "routes": [
-      {
-        "src": "/(.*)",
-        "dest": "chfrontend/$1"
-      }
-    ]
-  }
-  
+  "version": 2,
+  "builds": [
+    {
+      "src": "chfrontend/package.json",
+      "use": "@vercel/static-build",
+      "config": { "distDir": "build" }
+    }
+  ],
+  "routes": [
+    {
+      "src": "/(.*)",
+      "dest": "/chfrontend/build/$1"
+    }
+  ]
+}
