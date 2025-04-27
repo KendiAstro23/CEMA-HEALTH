@@ -1,0 +1,15 @@
+{
+    "builds": [
+      {
+        "src": "chfrontend/package.json",
+        "use": "@vercel/react"
+      }
+    ],
+    "routes": [
+      {
+        "src": "/(.*)",
+        "dest": "chfrontend/$1"
+      }
+    ]
+  }
+  
